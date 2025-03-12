@@ -254,12 +254,15 @@ nav {
 }
 
 .customisation__container {
-  text-align: center;
+  text-align: left;
+  margin-left: 50px;
+  margin-right: auto;
 }
 
 .customisation__container :is(.section__header, .section__description) {
   max-width: 750px;
-  margin: auto;
+  margin-left: 50px;
+  margin-right: auto;
   color: var(--white);
 }
 
@@ -269,6 +272,9 @@ nav {
 
 .price__container {
   text-align: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 5rem 1rem;
 }
 
 .price__grid {
@@ -279,18 +285,13 @@ nav {
 
 .price__card {
   position: relative;
-  overflow: hidden;
   padding: 4rem 1rem;
-  border-top: 5px solid var(--extra-light);
+  border: 5px solid var(--primary-color);
   border-radius: 10px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
   transition: 0.3s;
 }
 
-.price__card:hover {
-  border-color: var(--primary-color);
-  background-color: var(--extra-light);
-}
 
 .price__card__ribbon {
   position: absolute;
