@@ -198,6 +198,19 @@ nav {
   margin: auto;
 }
 
+.cegunkrol__cim{
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.5rem;
+  color: var(--secondary-color-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.tartalom{
+  font-size: 1.2rem;
+}
+
 .service {
   background-color: var(--extra-light);
 }
