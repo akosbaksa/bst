@@ -247,7 +247,7 @@ nav {
 
 .customisation {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/bmwservicethumbnail.jpg");
+    url("assets/bm");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -501,6 +501,12 @@ nav {
   color: var(--white);
   background-color: var(--secondary-color);
   text-align: center;
+}
+
+@media (width < 1100px) {
+  .banner__container {
+    display: none;
+  }
 }
 
 @media (width > 480px) {
