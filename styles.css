@@ -244,9 +244,10 @@ nav {
   color: var(--text-light);
 }
 
+
 .customisation {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/customisation.jpg");
+    url("assets/bmwservicethumbnail.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -262,20 +263,8 @@ nav {
   color: var(--white);
 }
 
-.customisation__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 4rem 2rem;
-}
-
-.customisation__card h4 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--white);
-}
-
-.customisation__card p {
-  color: var(--white);
+.customisation .customisation__container .btn{
+  margin-top: 30px;
 }
 
 .price__container {
