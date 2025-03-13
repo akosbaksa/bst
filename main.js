@@ -55,3 +55,7 @@ const swiper = new Swiper(".swiper", {
     disableOnInteraction: false
 },
 });
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}

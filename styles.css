@@ -634,3 +634,82 @@ nav {
     gap: 2rem;
   }
 }
+
+.svgIcon {
+  width: 12px;
+  transition-duration: 0.3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.felgomb:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.felgomb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(20, 20, 20);
+  border: none;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgb(9, 75, 175);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.felgomb:hover {
+  width: 140px;
+  border-radius: 50px;
+  transition-duration: 0.3s;
+  background-color: rgb(9, 75, 175);
+  align-items: center;
+}
+
+.felgomb:hover .svgIcon {
+  /* width: 20px; */
+  transition-duration: 0.3s;
+  transform: translateY(-200%);
+}
+
+.felgomb::before {
+  position: absolute;
+  bottom: -20px;
+  content: "Oldal tetejére";
+  color: var(--text-dark);
+  /* transition-duration: .3s; */
+  font-size: 0px;
+}
+
+.felgomb:hover::before {
+  font-size: 15px;
+  opacity: 1;
+  bottom: unset;
+  /* transform: translateY(-30px); */
+  transition-duration: 0.3s;
+}
+
+.felgomb {
+  position: fixed;
+  bottom: 20px; /* Távolság az oldal aljától */
+  right: 20px; /* Távolság az oldal szélétől */
+  z-index: 1000; /* Biztosítja, hogy más elemek fölött jelenjen meg */
+}
+
+@media (max-width: 600px) {
+  .felgomb {
+    bottom: 10px; /* Kisebb hely az aljától */
+    right: 10px; /* Kisebb hely az oldal szélétől */
+    padding: 8px 12px; /* Kisebb gombméret */
+    font-size: 14px; /* Kisebb szövegméret */
+  }
+}
