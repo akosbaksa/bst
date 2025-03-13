@@ -22,7 +22,7 @@
       <nav>
         <div class="nav__bar">
           <div class="logo nav__logo">
-            <a href="#"><img src="assets/bstlogo1-removebg-preview.png" alt="BST Autó Kft logó" /></a>
+            <a href="index.html"><img src="assets/bstlogo1-removebg-preview.png" alt="BST Autó Kft logó" /></a>
           </div>
           <div class="nav__menu__btn" id="menu-btn">
             <i class="ri-menu-3-line"></i>
@@ -32,9 +32,9 @@
           <li><a href="index.html">KEZDŐLAP</a></li>
           <li><a href="cegunkrol.html#about">CÉGÜNKRŐL</a></li>
           <li><a href="#service">SZOLGÁLTATÁSAINK</a></li>
-          <li><a href="#price">PRICE</a></li>
-          <li><a href="#client">CLIENT</a></li>
-          <button class="btn">Contact Us</button>
+          <li><a href="#price">AKCIÓK</a></li>
+          <li><a href="#client">GALÉRIA</a></li>
+          <button class="btn">KAPCSOLAT</button>
         </ul>
       </nav>
 
@@ -47,46 +47,85 @@
         </div>
       </div>
     </header>
+    <button class="felgomb" onclick="scrollToTop()">
+      <svg class="svgIcon" viewBox="0 0 384 512">
+      <path
+          d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"
+      ></path>
+      </svg>
+  </button>
+
 
     <!-- Tartalom -->
 
     <section class="price__container" id="service">
         <h1>SZOLGÁLTATÁSAINK</h1>
         <p class="section__description">
-          We offer a range of affordable and flexible pricing options.
+          BMW és MINI típusú gépkocsik javítása, szervizelése, elektronikus vizsgálata BMW gyári műszerekkel és BMW gyári alkatrészekkel
         </p>
         <div class="price__grid">
           <div class="price__card">
             <h3>Általános szolgáltatások</h3>
             <p>Műszaki vizsgára felkészítés</p>
-            <p>Autómentés</p>
-            <p>Gumiabroncs szerelés és centírozás</p>
             <p>Használt autó vásárlás előtti átvizsgálás</p>
-            <p>Hozom-viszem szolgáltatás</p>
             <p>Olajcsere</p>
-          </div>
-          <div class="price__card">
-            <h3>Karbantartás és diagnosztika</h3>
             <p>Automataváltó olajcsere</p>
             <p>Gépjármű diagnosztika</p>
-            <p>Kuplung javítás és csere</p>
-            <p>Turbó javítás</p>
-            <p>Vezérlés csere</p>
+            <p>Akkumulátor csere</p>
             <p>Autóklíma tisztítás</p>
+            <p>egyéb kisebb beavatkozások</p>
           </div>
           <div class="price__card">
-            <h3>Autóvillamosság</h3>
-            <p>Akkumulátor csere</p>
-            <p>Fényszóró beállítás, izzócsere</p>
+            <h3>Javítások</h3>
+            <p>Vezérlés csere</p>
+            <p>Kuplung javítás és csere</p>
+            <p>Turbó javítás</p>
+            <p>Osztómű javítás</p>
           </div>
           <div class="price__card">
             <h3>Fék és futómű javítás</h3>
             <p>Fékjavítás</p>
             <p>Futómű ellenőrzés és javítás</p>
             <p>Lengéscsillapító csere</p>
+            <p>Futúmű beállítás</p>
+          </div>
+
+
+        </div>
+        <br>
+        <div class="price__card">
+          <h3>Autókozmetika</h3>
+          <p>Teljes külső-belső tisztítás</p>
+          <p>Kárpittisztítás</p>
+          <p>Polírozás</p>
+          <p>Kerámia bevonat</p>
+        </div>
+        <br>
+        <div class="price__card">
+          <h3>Egyéb</h3>
+          <p>BMW tartozékok utólagos beszerelése</p>
+          <p>Egyéb típusú gépkocsik szervizelése, fékrendszer és futómű javítása, járműdiagnosztika</p>
+          <p>karosszéria javítás, biztosítási ügyintézéssel</p>
+          <p>klímarendszer feltöltése</p>
+        </div>
+
+      </section>
+      <section class="section__container" id="about">
+        <h2 class="cegunkrol__cim">TOVÁBBI INFORMÁCIÓ</h2>
+        <div class="experience__container">
+          <div class="cim">
+            <img src="assets/experience.jpg" alt="experience" />
+          </div>
+          <div class="tartalom">
+            <p>Az általunk elvégzett javításokra a magyar törvényekben meghatározott és a BMW GROUP által biztosított garanciákat vállaljuk. (A BMW és egyéb beszállítók garanciális elszámolást érintő feltételek szerint)</p>
+            <p>Alkatrész forgalmazó cégek esetében a beépítési számla, a forgalmi engedély másolata, az alkatrész megvásárlását bizonyító számla és a meghibásodás alkalmával felvett munkalap másolata szükséges a garanciális visszatérítések elszámolásához.</p>
+            <p>Csak az általunk beszerzett és beépített alkatrészek esetében végezhetjük a garanciális elszámolást.</p>
+            <p>Az alkatrészekre a forgalmazó határozza meg a garanciális időszak hosszát és feltételeit.</p>
+            <p>Figyelem!!!  A fenti feltételrendszer miatt hozott anyagok esetében a garanciális ügyintézés nem lehetséges!!</p>
           </div>
         </div>
       </section>
+  
 
     <footer class="footer">
       <div class="section__container subscribe__container">
