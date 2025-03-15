@@ -54,7 +54,8 @@
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: rgb(0, 41, 188);
+  color: white;
 }
 
 img {
@@ -712,4 +713,62 @@ nav {
     padding: 8px 12px; /* Kisebb gombméret */
     font-size: 14px; /* Kisebb szövegméret */
   }
+}
+
+
+details {
+	position: relative;
+	max-inline-size: 70rem;
+	padding: 1rem;
+	margin-block: 1rem 0;
+	margin-inline: auto;
+	background-color: var(--primary-color);
+	border: 1px solid hsl(260deg 100% 95%);
+	border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+summary {
+	padding-inline: 2rem;
+	position: relative;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.details::details-content {
+	display: block;
+	margin-inline: 2rem;
+	block-size: 0;
+	overflow: hidden;
+	transition-property: block-size, content-visibility;
+	transition-duration: 0.5s;
+	transition-behavior: allow-discrete;
+}
+
+.details[open]::details-content {
+	/* Fallback for browsers that don't support calc-size() function */
+	block-size: auto;
+	
+	/* calc-size() function allows transition to height: auto; */
+	block-size: calc-size(auto, size);
+}
+
+/* List Item ::marker supports only some CSS properties, so we're using ::before pseudo-element instead */
+summary::marker {
+	content: '»';
+	content: none;
+}
+
+summary::before {
+	content: '»';
+	position: absolute;
+	inset-inline-start: 1rem;
+	inset-block-start: -0.05rem;
+	transition: rotate 0.2s;
+}
+
+.details[open] summary::before {
+	rotate: 90deg;
+	inset-block-start: 0.05rem;
 }

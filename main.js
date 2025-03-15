@@ -57,5 +57,6 @@ const swiper = new Swiper(".swiper", {
 });
 
 function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
+console.log('ScrollReveal:', typeof ScrollReveal);
