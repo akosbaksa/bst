@@ -510,6 +510,18 @@ nav {
   .banner__container {
     display: none;
   }
+  .customisation__container :is(.section__header, .section__description) {
+    font-size: 1.5rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+  }
+
+  .customisation .customisation__container .btn{
+    margin-top: 30px;
+    margin-left: auto;
+  }
 }
 
 @media (width > 480px) {
@@ -876,3 +888,4 @@ hr{
   cursor: pointer;
   padding: 10px;
 }
+
