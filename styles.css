@@ -54,7 +54,8 @@
 }
 
 .btn:hover {
-  background-color: var(--primary-color-dark);
+  background-color: rgb(0, 41, 188);
+  color: white;
 }
 
 img {
@@ -68,6 +69,7 @@ img {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 ul {
@@ -508,6 +510,18 @@ nav {
   .banner__container {
     display: none;
   }
+  .customisation__container :is(.section__header, .section__description) {
+    font-size: 1.5rem;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--white);
+  }
+
+  .customisation .customisation__container .btn{
+    margin-top: 30px;
+    margin-left: auto;
+  }
 }
 
 @media (width > 480px) {
@@ -713,3 +727,165 @@ nav {
     font-size: 14px; /* Kisebb szövegméret */
   }
 }
+
+
+details {
+	position: relative;
+	max-inline-size: 70rem;
+	padding: 1rem;
+	margin-block: 1rem 0;
+	margin-inline: auto;
+	background-color: var(--primary-color);
+	border: 1px solid hsl(260deg 100% 95%);
+	border-radius: 0.3rem;
+  color: white;
+  font-size: 1.2rem;
+}
+
+summary {
+	padding-inline: 2rem;
+	position: relative;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.details::details-content {
+	display: block;
+	margin-inline: 2rem;
+	block-size: 0;
+	overflow: hidden;
+	transition-property: block-size, content-visibility;
+	transition-duration: 0.5s;
+	transition-behavior: allow-discrete;
+}
+
+.details[open]::details-content {
+	/* Fallback for browsers that don't support calc-size() function */
+	block-size: auto;
+	
+	/* calc-size() function allows transition to height: auto; */
+	block-size: calc-size(auto, size);
+}
+
+/* List Item ::marker supports only some CSS properties, so we're using ::before pseudo-element instead */
+summary::marker {
+	content: '»';
+	content: none;
+}
+
+summary::before {
+	content: '»';
+	position: absolute;
+	inset-inline-start: 1rem;
+	inset-block-start: -0.05rem;
+	transition: rotate 0.2s;
+}
+
+.details[open] summary::before {
+	rotate: 90deg;
+	inset-block-start: 0.05rem;
+}
+
+hr{
+  height: 3px;
+  background-color: var(--primary-color);
+  border: none;
+  opacity: 1;
+  border-radius: 5px;
+}
+
+.tartalom iframe {
+  width: 100%;
+  height: 100%;
+  border: var(--primary-color) 1px solid;
+  border-radius: 10px;
+}
+
+.terkep{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kapcsolat-card{
+  width: 450px;
+  height: 450px;
+  margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(189, 189, 189);
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.kapcsolat-box a{
+  color: black;
+}
+
+.kapcsolat-box {
+  margin: 0 auto;
+  padding: 25px 0;
+  width: 320px;
+}
+
+.kapcsolat-box p{
+  margin-bottom: 10px;
+}
+
+.kapcsolat-box p i{
+  margin-left: 15px;
+}
+
+.kapcsolat-box h3{
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.img-gallery{
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 30px;
+
+}
+
+.img-gallery img {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.img-gallery img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68,77,136,0.2);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img{
+  width: 90%;
+  max-width: 600px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
