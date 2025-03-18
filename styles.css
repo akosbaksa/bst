@@ -88,10 +88,18 @@ body {
 .header {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/bmwservicethumbnail2.jpg");
+    url("assets/bmw_f30_homokban.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+@media(width<769px) {
+  .header {
+    background-size: cover; /* Kitölti a teljes területet */
+    background-position: 35% center; /* Jobbra tolás (50% = közép, növeld pl. 70%-ra) */
+    background-repeat: no-repeat; /* Nem ismétlődik */
+  }
 }
 
 nav {
@@ -110,7 +118,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: var(--secondary-color-dark);
+  background-color: rgba(10, 11, 15, 0.3);
 }
 
 .nav__menu__btn {
@@ -121,6 +129,7 @@ nav {
 
 .nav__links {
   position: absolute;
+  top: 0px;
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -134,7 +143,7 @@ nav {
 }
 
 .nav__links.open {
-  transform: translateY(0);
+  transform: translateY(136px);
 }
 
 .nav__links a {
@@ -349,7 +358,7 @@ nav {
 
 .contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/contact.jpg");
+    url("assets/autokozmetika.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
