@@ -88,7 +88,7 @@ body {
 .header {
   padding-block: 5rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/bmw_f30_homokban.jpg");
+    url("assets/kek_bwm_ahteter.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -945,3 +945,94 @@ hr{
 .gomb:hover {
   background-color: #74251c;
 }
+
+
+.container {
+  display: flex;
+  align-items: flex-start; /* Igazítás a kártyák tetejéhez */
+  flex-wrap: wrap;
+  justify-content: center; /* Középre igazítás */
+}
+
+.card_box {
+  width: 300px;
+  height: 400px; /* Növeljük a magasságot, hogy több szöveg elférjen */
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+  margin: 1rem;
+  overflow: hidden; /* A kártyán belüli tartalom levágása */
+  color: white; /* Szöveg színe fehér */
+}
+
+.card_box:hover {
+  transform: scale(0.9);
+}
+
+.price__card span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price__card span::before {
+  content: 'Népszerű';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.price__card span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+
+.termek_leiras {
+  padding: 10px; /* Padding a tartalom körül */
+  text-align: center; /* Középre igazítás */
+}
+
+.termek_leiras img {
+  max-width: 40%; /* Kép maximális szélessége */
+  margin: 0 auto 15px auto;
+  height: auto; /* Magasság automatikus beállítása */
+}
+
+.price__container .container .price__grid .price__card {
+  width: 300px;
+  height: 500px; /* Növeljük a magasságot, hogy több szöveg elférjen */
+  border-radius: 20px;
+}
+
+.price__container .container .price__card img{
+  max-width: 50%; /* Kép maximális szélessége */
+  margin: 0 auto 15px auto;
+  height: auto; /* Magasság automatikus beállítása */
+}
+
