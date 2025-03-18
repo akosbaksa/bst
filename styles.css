@@ -94,6 +94,14 @@ body {
   background-repeat: no-repeat;
 }
 
+@media(width<769px) {
+  .header {
+    background-size: cover; /* Kitölti a teljes területet */
+    background-position: 35% center; /* Jobbra tolás (50% = közép, növeld pl. 70%-ra) */
+    background-repeat: no-repeat; /* Nem ismétlődik */
+  }
+}
+
 nav {
   position: fixed;
   isolation: isolate;
@@ -350,7 +358,7 @@ nav {
 
 .contact {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("assets/contact.jpg");
+    url("assets/autokozmetika.png");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
