@@ -2,7 +2,7 @@
 
 :root {
   --primary-color: rgb(32, 78, 230);
-  --primary-color-dark: rgb(32, 78, 230);
+  --primary-color-dark: rgb(0, 41, 188);
   --secondary-color: #15151f;
   --secondary-color-dark: #0a0b0f;
   --text-light: #6b7280;
@@ -284,6 +284,7 @@ nav {
 
 .price__container {
   text-align: center;
+  position: relative;
   max-width: 1200px;
   margin: auto;
   padding: 5rem 1rem;
@@ -1352,4 +1353,22 @@ hr{
 .category-button3:hover {
   background: #ff3c78;
   color: white;
+}
+
+
+.back-button {
+  position: absolute; 
+  top: 10px; 
+  left: 10px; 
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: var(--primary-color); 
+  color: white; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: var(--primary-color-dark); 
 }
