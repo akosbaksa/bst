@@ -1,9 +1,8 @@
 // proba
 
 const promoMessages = [
-    "🚗 AKCIÓ! Most akár -30% kedvezmény!",
-    "🔧 Ingyenes átvizsgálás minden javítás mellé!",
-    "🔥 Olajcsere és szűrők cseréje most 20% kedvezménnyel!",
+    "🚀 Most akár -50% kedvezmény!",
+    "🔥 Folyamatosan frissülő ajánlatok!",
     "🚙 Téligumi csere AKCIÓS áron!"
   ];
   
