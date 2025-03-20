@@ -23,6 +23,12 @@
   padding: 5rem 1rem;
 }
 
+.section__container2 {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
 .section__subheader {
   font-size: 1rem;
   font-weight: 500;
@@ -333,7 +339,7 @@ nav {
 }
 
 
-.price__card p:last-of-type {
+.ar .price__card p:last-of-type {
   font-size: 2rem; /* Nagyobb betűméret */
   font-weight: bold; /* Félkövér betű */
   color: var(--primary-color); /* Elsődleges színnel */
@@ -853,6 +859,15 @@ hr{
   width: 450px;
   height: 450px;
   margin: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgb(189, 189, 189);
+  background-color: #f0f0f0;
+  color: black;
+}
+.kapcsolat-card2{
+  max-width: var(--max-width);
+  height: 450px;
+  margin-top: 3rem;
   border-radius: 10px;
   box-shadow: 0 0 15px rgb(189, 189, 189);
   background-color: #f0f0f0;
