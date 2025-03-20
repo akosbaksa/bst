@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <title>BST Autó Kft - BMW-re szakosodott szakszerviz Nyíregyháza</title>
+    <title>BMW-re szakosodott független márkaszerviz Nyíregyháza</title>
   </head>
   <body>
     <div class="marquee-container">
@@ -100,23 +100,25 @@
         <div class="title">Küldj nekünk üzenetet</div>
         <div class="subtitle">Let's create your account!</div>
   
-        <div class="input-container ic1">
-          <input placeholder="" type="text" class="input" id="firstname">
-          <div class="cut"></div>
-          <label class="iLabel" for="firstname">Vezetéknév</label>
-        </div>
-  
-        <div class="input-container ic2">
-          <input placeholder="" type="text" class="input" id="lastname">
-          <div class="cut"></div>
-          <label class="iLabel" for="lastname">Keresztnév</label>
-        </div>
-        <div class="input-container ic2">
-          <textarea id="email" class="input"></textarea>
-          <div class="cut cut-short"></div>
-          <label class="iLabel" for="email">Üzenet</label>
-        </div>
-        <button class="submit" type="text">Elküld</button>
+        <form action="https://formsubmit.co/your@email.com" method="POST">
+          <div class="input-container ic1">
+            <input placeholder=" " type="text" name="Név" class="input" id="firstname" required>
+            <div class="cut"></div>
+            <label class="iLabel" for="firstname">Teljes név</label>
+          </div>
+    
+          <div class="input-container ic2">
+            <input placeholder=" " type="email" name="Email" class="input" id="lastname" required>
+            <div class="cut cut-short"></div>
+            <label class="iLabel" for="lastname">Email</label>
+          </div>
+          <div class="input-container ic2">
+            <textarea placeholder=" " id="message" name="Üzenet" class="input" required></textarea>
+            <div class="cut cut-short"></div>
+            <label class="iLabel" for="message">Üzenet</label>
+          </div>
+          <button class="submit" type="submit">Elküld</button>
+        </form>
       </div>
       
     </section>

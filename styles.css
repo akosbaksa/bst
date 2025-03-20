@@ -1543,14 +1543,6 @@ hr{
   top: 20px;
 }
 
-.input:focus ~ .cut {
-  transform: translateY(8px);
-}
-
-.input:focus ~ .iLabel {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
-}
-
 .input:not(:focus) ~ .iLabel {
   color: #808097;
 }
@@ -1575,4 +1567,16 @@ hr{
 
 .submit:active {
   background-color: #06b;
+}
+
+.input:focus ~ .iLabel,
+.input:not(:placeholder-shown) ~ .iLabel {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+  color: #dc2f55;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  background-color: #15172b;
+  transform: translateY(8px);
 }
