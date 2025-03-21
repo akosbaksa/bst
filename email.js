@@ -1,8 +1,12 @@
 function sendEmail() {
-    const name = document.getElementById("name").value.trim()
-    const email = document.getElementById("email").value.trim()
-    const message = document.getElementById("message").value.trim()
-    
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const messageInput = document.getElementById("message");
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
     if(name === "" ||  email === "" ||  message === ""){
         alert("Minden mező kitöltése kötelező!")
     }else{
@@ -16,6 +20,9 @@ function sendEmail() {
             emailjs.send("service_7j4qc3n","template_xy9mpen",parms)
             .then(() => {
                 alert("Üzenet elküldve!")
+                nameInput.value = "";
+                emailInput.value = "";
+                messageInput.value = "";
             })
             .catch((error) => {
                 console.log("Hiba az üzenet elküldése közben!", error)
