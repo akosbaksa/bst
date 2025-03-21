@@ -16,6 +16,16 @@
     rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "Q21jcnItajy7GL4hY",
+      });
+    })();
+    </script>
 
     <title>BMW-re szakosodott független márkaszerviz Nyíregyháza</title>
   </head>
@@ -100,24 +110,24 @@
         <div class="title">Küldj nekünk üzenetet</div>
         <div class="subtitle">Let's create your account!</div>
   
-        <form action="https://formsubmit.co/your@email.com" method="POST">
+        <form>
           <div class="input-container ic1">
-            <input placeholder=" " type="text" name="Név" class="input" id="firstname" required>
+            <input placeholder=" " type="text" name="Név" class="input" id="name" required>
             <div class="cut"></div>
-            <label class="iLabel" for="firstname">Teljes név</label>
+            <label class="iLabel" for="name">Teljes név</label>
           </div>
     
           <div class="input-container ic2">
-            <input placeholder=" " type="email" name="Email" class="input" id="lastname" required>
+            <input placeholder=" " type="email" name="Email" class="input" id="email" required>
             <div class="cut cut-short"></div>
-            <label class="iLabel" for="lastname">Email</label>
+            <label class="iLabel" for="email">Email</label>
           </div>
           <div class="input-container ic2">
             <textarea placeholder=" " id="message" name="Üzenet" class="input" required></textarea>
             <div class="cut cut-short"></div>
             <label class="iLabel" for="message">Üzenet</label>
           </div>
-          <button class="submit" type="submit">Elküld</button>
+          <button class="submit" type="button" onclick="sendEmail()">Elküld</button>
         </form>
       </div>
       
@@ -197,5 +207,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="main.js"></script>
+    <script src="email.js"></script>
   </body>
 </html>

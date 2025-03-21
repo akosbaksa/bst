@@ -1580,3 +1580,9 @@ hr{
   background-color: #15172b;
   transform: translateY(8px);
 }
+
+@media (width < 455px){
+  .form{
+    height: 600px;
+  }
+}
