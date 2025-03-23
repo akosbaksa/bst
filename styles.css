@@ -1586,3 +1586,14 @@ hr{
     height: 600px;
   }
 }
+
+
+.alert-box {
+  overflow: hidden; /* Hide overflow */
+  height: 0; /* Initial height */
+  transition: height 0.5s ease; /* Transition for height */
+}
+
+.slide-down {
+  height: auto; /* Allow height to change */
+}
