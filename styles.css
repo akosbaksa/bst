@@ -1461,7 +1461,7 @@ hr{
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 620px;
+  height: 670px;
   padding: 20px;
   max-width: 800px;
   margin: 3rem auto;
@@ -1581,9 +1581,9 @@ hr{
   transform: translateY(8px);
 }
 
-@media (width < 467px){
+@media (width < 689px){
   .form{
-    height: 670px;
+    height: auto;
   }
 }
 
