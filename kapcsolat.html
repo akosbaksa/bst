@@ -111,7 +111,7 @@
 
       <div class="form">
         <div class="title">Küldj nekünk üzenetet!</div>
-        <div class="subtitle">Let's create your account!</div>
+        <div class="subtitle">Az email-ben adja meg teljes nevét, email címét valamint üzentét!</div>
   
         <form>
           <div class="input-container ic1">
@@ -129,6 +129,12 @@
             <textarea placeholder=" " id="message" name="Üzenet" class="input" required></textarea>
             <div class="cut cut-short"></div>
             <label class="iLabel" for="message">Üzenet</label>
+          </div>
+          <div class="input-container">
+            <div class="adatkezeles">
+              
+              <label for=""><input type="checkbox" id="adatkezeles"> Elfogadom az <span><a href="">adatkezelési tájékoztatót</a></span>!</label>
+            </div>
           </div>
           <button class="submit" type="button" onclick="sendEmail()">Elküld</button>
         </form>

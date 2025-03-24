@@ -880,7 +880,7 @@ hr{
 
 .kapcsolat-box {
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 25px 10px;
   width: 320px;
 }
 
@@ -1461,7 +1461,7 @@ hr{
   background-color: #15172b;
   border-radius: 20px;
   box-sizing: border-box;
-  height: 550px;
+  height: 620px;
   padding: 20px;
   max-width: 800px;
   margin: 3rem auto;
@@ -1469,7 +1469,7 @@ hr{
 
 .title {
   color: #eee;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 36px;
   font-weight: 600;
   margin-top: 30px;
@@ -1477,7 +1477,7 @@ hr{
 
 .subtitle {
   color: #eee;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 600;
   margin-top: 10px;
@@ -1560,7 +1560,7 @@ hr{
   cursor: pointer;
   font-size: 18px;
   height: 50px;
-  margin-top: 90px;
+  margin-top: 10px;
   text-align: center;
   width: 100%;
 }
@@ -1581,9 +1581,9 @@ hr{
   transform: translateY(8px);
 }
 
-@media (width < 455px){
+@media (width < 467px){
   .form{
-    height: 600px;
+    height: 670px;
   }
 }
 
@@ -1596,4 +1596,21 @@ hr{
 
 .slide-down {
   height: auto; /* Allow height to change */
+}
+
+.adatkezeles{
+  margin-top: 100px;
+  color: white;
+}
+
+.adatkezeles span a {
+  text-decoration: underline;
+}
+
+.adatkezeles span a:hover {
+  color: #08d;
+}
+
+.adatkezeles label{
+  white-space: wrap;
 }

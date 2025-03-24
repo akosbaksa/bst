@@ -2,32 +2,45 @@ function sendEmail() {
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
+    const checkbtn = document.getElementById("adatkezeles");
 
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
+    const isChecked = checkbtn.checked
+    let szovegesValasz = ""
+
+    if(isChecked){
+        szovegesValasz = "Elfogadva"
+    }
 
     if(name === "" ||  email === "" ||  message === ""){
         ertesites('hiba','Hiba - Minden mező kitöltése kötelező!')
     }else{
         if(validateEmailFormat(email)){
-            const parms = {
-                name : name,
-                email : email,
-                message : message
+            if(isChecked){
+                const parms = {
+                    name : name,
+                    email : email,
+                    message : message,
+                    adatkezeles: szovegesValasz
+                }
+        
+                emailjs.send("service_7j4qc3n","template_xy9mpen",parms)
+                .then(() => {
+                    ertesites('sikeres','Siker - Az üzenetet sikeresen elküldted!');
+                    nameInput.value = "";
+                    emailInput.value = "";
+                    messageInput.value = "";
+                    checkbtn.checked = false;
+                })
+                .catch((error) => {
+                    console.log("Hiba az üzenet elküldése közben!", error)
+                    ertesites('hiba','Hiba - Az üzenetet nem sikerült elküldeni!')
+                })
+            }else{
+                ertesites('warning', 'Fogadd el az adatkezelési tájékoztatót!')
             }
-    
-            emailjs.send("service_7j4qc3n","template_xy9mpen",parms)
-            .then(() => {
-                ertesites('sikeres','Siker - Az üzenetet sikeresen elküldted!');
-                nameInput.value = "";
-                emailInput.value = "";
-                messageInput.value = "";
-            })
-            .catch((error) => {
-                console.log("Hiba az üzenet elküldése közben!", error)
-                ertesites('hiba','Hiba - Az üzenetet nem sikerült elküldeni!')
-            })
         }
         else{
             ertesites('warning','Az email címet helyes formátumban add meg! Pl.: gibszjakab@gmail.com!')
