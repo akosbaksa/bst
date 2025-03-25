@@ -10,7 +10,7 @@ function sendEmail() {
 
 
     const name = nameInput.value.trim();
-    const email = emailInput.value.trim();
+    const email = emailInput.value.trim().toLowerCase();
     const message = messageInput.value.trim();
     const telefonszam = telefonszamInput.value.trim();
     const jtipus = jtipusInput.value.trim();
@@ -106,3 +106,7 @@ function ertesites(allapot,uzenet) {
             }, 4000); 
 }
 
+function toLowerCaseEmail() {
+    const emailInput = document.getElementById("email");
+    emailInput.value = emailInput.value.toLowerCase(); // Kisbetűsre alakítja az e-mailt
+}

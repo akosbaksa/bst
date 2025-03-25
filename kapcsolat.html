@@ -137,6 +137,7 @@
               name="input-name"
               title="Email cím"
               placeholder="valaki@valami.com"
+              oninput="toLowerCaseEmail()"
               required
             />
           </label>
@@ -201,7 +202,7 @@
           <div class="adatkezeles">
             <label for="">
               <input type="checkbox" name="" id="adatkezeles">
-              Elfogadom az <span><a href="./docs/BST AUTÓ KFT. - Adatkezelési tájékoztató.pdf">adatkezelési tájékoztatót!</a></span>
+              Elfogadom az <span><a href="./docs/BST AUTÓ KFT. - Adatkezelési tájékoztató.pdf" >adatkezelési tájékoztatót!</a></span>
             </label>
           </div>
           <button class="checkout-btn" type="button" onclick="sendEmail()">Küldés</button>
