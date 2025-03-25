@@ -61,7 +61,7 @@ function sendEmail() {
                     ertesites('warning', 'Fogadd el az adatkezelési tájékoztatót!')
                 }
             }else{
-                ertesites('warning', 'A telefonszámodat a mintának megfelelően add meg! Pl.: +36 20 123 4567')
+                ertesites('warning', 'A telefonszámodat a mintának megfelelően add meg! Pl.: +36 30 123 4567')
             }
         }
         else{
@@ -76,7 +76,7 @@ function validateEmailFormat(email) {
 }
 
 function validatePhoneNumber(phoneInput) {
-    const phoneRegex = /^\+36\s?(20|30|70)\s?\d{3}\s?\d{4}$/;
+    const phoneRegex = /^\+36\s?(20|30|70|40)\s?\d{3}\s?\d{4}$/;
     console.log(phoneRegex.test(phoneInput))
     return phoneRegex.test(phoneInput)
 }
