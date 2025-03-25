@@ -109,38 +109,104 @@
       </div>
       
 
-      
-
-      <div class="form">
-        <div class="title">Küldj nekünk üzenetet!</div>
-        <div class="subtitle">Kérjük, adja meg valódi nevét és érvényes e-mail címét. Kérdéseit kizárólag indokolt esetben küldje el részünkre. Felhívjuk figyelmét, hogy promóciós vagy egyéb, nem releváns üzenetekre nem áll módunkban válaszolni.</div>
-  
-        <form>
-          <div class="input-container ic1">
-            <input placeholder=" " type="text" name="Név" class="input" id="name" required>
-            <div class="cut"></div>
-            <label class="iLabel" for="name">Teljes név</label>
+        <form class="form">
+          <h2 class="section__header">
+            Küldj nekünk üzenetet!
+          </h2>
+          <p class="section__description">
+            Kérjük, adja meg valódi nevét és érvényes e-mail címét. Kérdéseit kizárólag indokolt esetben küldje el részünkre. Felhívjuk figyelmét, hogy promóciós vagy egyéb, nem releváns üzenetekre nem áll módunkban válaszolni.
+          </p>
+          <label for="name" class="label">
+            <span class="title">Teljes név *</span>
+            <input
+              class="input-field"
+              id="name"
+              type="text"
+              name="input-name"
+              title="Teljes név"
+              placeholder="Nagy Béla"
+              required
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Email cím *</span>
+            <input
+              id="email"
+              class="input-field"
+              type="text"
+              name="input-name"
+              title="Email cím"
+              placeholder="valaki@valami.com"
+              required
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Telefonszám *</span>
+            <input
+              id="telefonszam"
+              class="input-field"
+              type="text"
+              name="input-name"
+              title="Telefonszám"
+              placeholder="+36 30 123 4567"
+              required
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Jármű típusa</span>
+            <input
+              id="jtipus"
+              class="input-field"
+              type="text"
+              name="input-name"
+              title="Jármű típusa"
+              placeholder="Márka és modell"
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Alvázszám</span>
+            <input
+              id="alvazszam"
+              class="input-field"
+              type="text"
+              name="input-name"
+              title="Alvázszám"
+              placeholder=""
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Tárgy *</span>
+            <input
+              id="targy"
+              class="input-field"
+              type="text"
+              name="input-name"
+              title="Tárgy"
+              placeholder="Pl.: Kötelező szervizre időpontkérés"
+              required
+            />
+          </label>
+          <label for="serialCardNumber" class="label">
+            <span class="title">Üzenet *</span>
+            <textarea 
+              id="message"
+              class="input-field"
+              name="input-name"
+              title="Üzenet"
+              placeholder="Kérjük, ide írja az észlelt problémát/árajánlatkérés tárgyát bővebben/kérdését"
+              required
+            ></textarea>
+          </label>
+          
+          <div class="adatkezeles">
+            <label for="">
+              <input type="checkbox" name="" id="adatkezeles">
+              Elfogadom az <span><a href="./docs/BST AUTÓ KFT. - Adatkezelési tájékoztató.pdf">adatkezelési tájékoztatót!</a></span>
+            </label>
           </div>
-    
-          <div class="input-container ic2">
-            <input placeholder=" " type="email" name="Email" class="input" id="email" required>
-            <div class="cut cut-short"></div>
-            <label class="iLabel" for="email">Email</label>
-          </div>
-          <div class="input-container ic2">
-            <textarea placeholder=" " id="message" name="Üzenet" class="input" required></textarea>
-            <div class="cut cut-short"></div>
-            <label class="iLabel" for="message">Üzenet</label>
-          </div>
-          <div class="input-container">
-            <div class="adatkezeles">
-              
-              <label for=""><input type="checkbox" id="adatkezeles"> Elfogadom az <span><a href="./docs/BST AUTÓ KFT. - Adatkezelési tájékoztató.pdf" target="_blank">adatkezelési tájékoztatót</a></span>!</label>
-            </div>
-          </div>
-          <button class="submit" type="button" onclick="sendEmail()">Elküld</button>
+          <button class="checkout-btn" type="button" onclick="sendEmail()">Küldés</button>
         </form>
-      </div>
+
 
       <!-- sikeres uzenet -->
       <div class="space-y-2 p-4 justify-center item-center fixed top-48 left-1/2 transform -translate-x-1/2 lg:top-10">

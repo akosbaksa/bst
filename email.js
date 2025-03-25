@@ -3,10 +3,19 @@ function sendEmail() {
     const emailInput = document.getElementById("email");
     const messageInput = document.getElementById("message");
     const checkbtn = document.getElementById("adatkezeles");
+    const telefonszamInput = document.getElementById("telefonszam");
+    const jtipusInput = document.getElementById("jtipus");
+    const alvazszamInput = document.getElementById("alvazszam");
+    const targyInput = document.getElementById("targy");
+
 
     const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
+    const telefonszam = telefonszamInput.value.trim();
+    const jtipus = jtipusInput.value.trim();
+    const alvazszam = alvazszamInput.value.trim();
+    const targy = targyInput.value.trim();
     const isChecked = checkbtn.checked
     let szovegesValasz = ""
 
@@ -14,32 +23,40 @@ function sendEmail() {
         szovegesValasz = "Elfogadva"
     }
 
-    if(name === "" ||  email === "" ||  message === ""){
-        ertesites('hiba','Hiba - Minden mező kitöltése kötelező!')
+    if(name === "" ||  email === "" ||  message === "" || telefonszam === "" || targy === ""){
+        ertesites('hiba','Hiba - A *-al jelölt mezőket kötelező kitölteni!')
     }else{
         if(validateEmailFormat(email)){
-            if(isChecked){
-                const parms = {
-                    name : name,
-                    email : email,
-                    message : message,
-                    adatkezeles: szovegesValasz
+            if(validatePhoneNumber(telefonszam)){
+                if(isChecked){
+                    const parms = {
+                        name : name,
+                        email : email,
+                        message : message,
+                        adatkezeles: szovegesValasz,
+                        telefonszam : telefonszam,
+                        jtipus : jtipus,
+                        alvazszam : alvazszam,
+                        targy : targy,
+                    }
+            
+                    emailjs.send("service_7j4qc3n","template_xy9mpen",parms)
+                    .then(() => {
+                        ertesites('sikeres','Siker - Az üzenetet sikeresen elküldted!');
+                        nameInput.value = "";
+                        emailInput.value = "";
+                        messageInput.value = "";
+                        checkbtn.checked = false;
+                    })
+                    .catch((error) => {
+                        console.log("Hiba az üzenet elküldése közben!", error)
+                        ertesites('hiba','Hiba - Az üzenetet nem sikerült elküldeni!')
+                    })
+                }else{
+                    ertesites('warning', 'Fogadd el az adatkezelési tájékoztatót!')
                 }
-        
-                emailjs.send("service_7j4qc3n","template_xy9mpen",parms)
-                .then(() => {
-                    ertesites('sikeres','Siker - Az üzenetet sikeresen elküldted!');
-                    nameInput.value = "";
-                    emailInput.value = "";
-                    messageInput.value = "";
-                    checkbtn.checked = false;
-                })
-                .catch((error) => {
-                    console.log("Hiba az üzenet elküldése közben!", error)
-                    ertesites('hiba','Hiba - Az üzenetet nem sikerült elküldeni!')
-                })
             }else{
-                ertesites('warning', 'Fogadd el az adatkezelési tájékoztatót!')
+                ertesites('warning', 'A telefonszámodat a mintának megfelelően add meg! Pl.: +36 20 123 4567')
             }
         }
         else{
@@ -51,6 +68,12 @@ function sendEmail() {
 function validateEmailFormat(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
+}
+
+function validatePhoneNumber(phoneInput) {
+    const phoneRegex = /^\+36\s?(20|30|70)\s?\d{3}\s?\d{4}$/;
+    console.log(phoneRegex.test(phoneInput))
+    return phoneRegex.test(phoneInput)
 }
 
 function ertesites(allapot,uzenet) {
@@ -77,3 +100,4 @@ function ertesites(allapot,uzenet) {
                 }, { once: true }); // Csak egyszeri eseménykezelő
             }, 4000); 
 }
+
