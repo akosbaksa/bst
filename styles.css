@@ -1579,7 +1579,7 @@ hr{
   fill: #fff;
   color: #fff;
   border: 2px solid transparent;
-  background: #d17842;
+  background: #204EE6;
   transition: all 200ms;
 }
 .form .checkout-btn:active {
@@ -1587,8 +1587,8 @@ hr{
 }
 
 .form .checkout-btn:hover {
-  color: #d17842;
-  border: 2px solid #d17842;
+  color: #204EE6;
+  border: 2px solid #204EE6;
   background: transparent;
 }
 
