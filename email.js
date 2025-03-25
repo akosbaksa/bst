@@ -46,6 +46,11 @@ function sendEmail() {
                         nameInput.value = "";
                         emailInput.value = "";
                         messageInput.value = "";
+                        telefonszamInput.value = "";
+                        jtipusInput.value = "";
+                        alvazszamInput.value = "";
+                        targyInput.value = "";
+
                         checkbtn.checked = false;
                     })
                     .catch((error) => {
