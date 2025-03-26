@@ -65,4 +65,3 @@ console.log('ScrollReveal:', typeof ScrollReveal);
 
 
 console.log("A main.js betöltődött!");
-
