@@ -1627,36 +1627,24 @@ hr{
   white-space: wrap;
 }
 
-.logo-grid {
-  margin: 15px auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  gap: 10px; /* Képek közötti távolság */
-}
-
-@media (min-width: 600px) {
-  .logo-grid {
-      grid-template-columns: repeat(4, 1fr); /* 4 oszlop 600px felett */
-  }
-}
-
-@media (min-width: 900px) {
-  .logo-grid {
-      grid-template-columns: repeat(8, 1fr); /* 8 oszlop 900px felett */
-  }
-}
-
-.logo-grid img {
-  width: 100%; /* Kép szélessége 100% */
-  height: auto; /* Magasság automatikus */
-  object-fit: contain; /* Kép arányainak megőrzése */
-}
-
-.logo-grid img {
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+  background: white;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: auto; /* Középre igazítás */
-  max-width: 100%; /* Maximum szélesség */
-  max-height: 100%; /* Maximum magasság */
+  padding: 10px 0;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  gap: 30px;
+  white-space: nowrap;
+}
+
+.slider img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
 }

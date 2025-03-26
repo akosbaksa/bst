@@ -66,3 +66,28 @@ console.log('ScrollReveal:', typeof ScrollReveal);
 
 console.log("A main.js betöltődött!");
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.querySelector(".slider");
+  const logos = Array.from(slider.children);
+
+  // Logók duplikálása folyamatos görgetéshez
+  logos.forEach((logo) => {
+    let clone = logo.cloneNode(true);
+    slider.appendChild(clone);
+  });
+
+  let speed = 1; // Sebesség (minél nagyobb, annál gyorsabb)
+  let pos = 0;
+
+  function animate() {
+    pos -= speed;
+    if (pos <= -slider.scrollWidth / 2) {
+      pos = 0;
+    }
+    slider.style.transform = `translateX(${pos}px)`;
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+});
