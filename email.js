@@ -23,7 +23,7 @@ function sendEmail() {
         szovegesValasz = "Elfogadva"
     }
 
-    if(name === "" ||  email === "" ||  message === "" || telefonszam === "" || targy === ""){
+    if(name === "" ||  email === "" ||  message === "" || telefonszam === "" || targy === "" || alvazszam == "" ){
         ertesites('hiba','Hiba - A *-al jelölt mezőket kötelező kitölteni!')
     }else{
         if(validateEmailFormat(email)){
