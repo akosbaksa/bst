@@ -1089,7 +1089,7 @@ hr{
 .price__container .container .price__card img{
   max-width: 50%; /* Kép maximális szélessége */
   margin: 0 auto 15px auto;
-  height: 129px; /* Magasság automatikus beállítása */
+  height: auto; /* Magasság automatikus beállítása */
 }
 
 /* szunet */
