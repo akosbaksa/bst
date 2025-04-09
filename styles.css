@@ -1648,3 +1648,67 @@ hr{
   height: auto;
   object-fit: contain;
 }
+
+
+
+/* COOKIES  */
+
+
+.popup {
+  display: none; /* Alapértelmezetten rejtve */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 5px solid #007BFF;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 320px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards; /* Animáció a megjelenéshez */
+  z-index: 1001;
+}
+
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.9);
+  }
+  100% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.cookie-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  display: block; /* Blokk szintű elemként viselkedik */
+  margin-left: auto;  /* Középre igazítás */
+  margin-right: auto; /* Középre igazítás */
+}
+
+
+button {
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:focus {
+  outline: none;
+}

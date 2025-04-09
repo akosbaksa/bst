@@ -91,3 +91,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animate();
 });
+
+
+// COOKIES
+
+// Ellenőrizze, hogy a süti már el lett-e fogadva az aktuális session-ban
+if (!sessionStorage.getItem("cookieAccepted")) {
+  // Ha még nem lett elfogadva, jelenítse meg a figyelmeztető ablakot
+  setTimeout(function() {
+      document.getElementById("cookie-popup").style.display = "block";
+  }, 500); // 0.5 másodperccel a betöltés után jelenik meg
+}
+
+// "Elfogadás" gomb
+document.getElementById("accept-btn").addEventListener("click", function() {
+  // Süti elfogadása
+  sessionStorage.setItem("cookieAccepted", "true");
+  // Figyelmeztető ablak eltűnik
+  document.getElementById("cookie-popup").style.display = "none";
+});
+
+// "Elutasítás" gomb
+document.getElementById("decline-btn").addEventListener("click", function() {
+  // Süti elutasítása
+  sessionStorage.setItem("cookieAccepted", "false");
+  // Figyelmeztető ablak eltűnik
+  document.getElementById("cookie-popup").style.display = "none";
+});
