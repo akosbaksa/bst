@@ -108,7 +108,7 @@ document.getElementById("accept-btn").addEventListener("click", function() {
   // Süti elfogadása
   sessionStorage.setItem("cookieAccepted", "true");
   // Figyelmeztető ablak eltűnik
-  document.getElementById("cookie-popup").style.display = "none";
+  hidePopup();
 });
 
 // "Elutasítás" gomb
@@ -116,5 +116,15 @@ document.getElementById("decline-btn").addEventListener("click", function() {
   // Süti elutasítása
   sessionStorage.setItem("cookieAccepted", "false");
   // Figyelmeztető ablak eltűnik
-  document.getElementById("cookie-popup").style.display = "none";
+  hidePopup();
 });
+
+function hidePopup() {
+  const popup = document.getElementById("cookie-popup");
+  popup.classList.add('hidden'); // Hozzáadjuk a 'hidden' osztályt
+
+  // Várunk az animáció befejezésére, majd eltüntetjük a popupot
+  popup.addEventListener('animationend', function() {
+    popup.style.display = "none"; // Eltüntetjük a DOM-ból
+  }, { once: true }); // Csak egyszeri eseménykezelő
+}
