@@ -59,3 +59,21 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     });
   });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.querySelector('.zoomable');
+    let isZoomed = false;
+
+    img.addEventListener('click', () => {
+      if (window.innerWidth < 768) return; // Csak gépen működjön
+
+      isZoomed = !isZoomed;
+      img.classList.toggle('zoomed');
+    });
+
+    // Töröljük az egérkövetést
+    img.addEventListener('mousemove', (e) => {
+      if (isZoomed) return; // Ne csináljon semmit nagyítva
+      // Ha szükséges, ide jöhet mozgó zoom origin - most nem kell
+    });
+  });

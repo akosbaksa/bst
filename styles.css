@@ -974,6 +974,18 @@ hr{
   cursor: pointer;
 }
 
+.zoomable {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.zoomable.zoomed {
+  transform: scale(2);
+  transform-origin: center center !important;
+  cursor: zoom-out;
+  pointer-events: auto;
+}
+
 
 .akciok-szekcio {
   background-color: #ffcc00;
