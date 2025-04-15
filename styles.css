@@ -1469,18 +1469,16 @@ hr{
 }
 #message.input-field {
   min-height: 150px;
-  padding: 15px; /* Az input mezőkével egyező belső tér */
-  line-height: 1.5; /* Olvashatóbb szöveg */
-  resize: none; /* Ha nem akarod, hogy átméretezhető legyen */
+  padding: 15px;
+  line-height: 1.5;
+  resize: none;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
-/* Placeholder szöveg igazítása felülre */
 #message::placeholder {
-  position: absolute;
-  top: 15px; /* Ugyanolyan padding, mint az inputoknál */
-  left: 15px;
-  color: #8b8e98; /* Az input placeholder színével megegyező */
-  font-size: 17px;
+  color: #8b8e98;
+  font-size: 16px;
 }
 
 /* Amikor fókuszba kerül, a szöveg felül marad */
