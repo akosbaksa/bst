@@ -954,6 +954,26 @@ hr{
   padding: 10px;
 }
 
+.full-img .nav.left {
+  left: 20px; /* vagy 10px, ahogy tetszik */
+  right: auto;
+  padding: 10px;
+}
+
+.full-img .nav.right {
+  right: 20px;
+  left: auto;
+  padding: 10px;
+}
+
+.full-img .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  cursor: pointer;
+}
+
 
 .akciok-szekcio {
   background-color: #ffcc00;

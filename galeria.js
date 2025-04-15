@@ -1,31 +1,61 @@
 document.addEventListener("DOMContentLoaded", function() {
     const fullImgBox = document.getElementById("fullImgBox");
     const fullImg = document.getElementById("fullImg");
+    const galleryImages = document.querySelectorAll(".img-gallery img");
+    const closeBtn = document.querySelector(".full-img .close");
+    const leftBtn = document.querySelector(".full-img .left");
+    const rightBtn = document.querySelector(".full-img .right");
   
-    function openFullImg(imgSrc) {
-        fullImgBox.style.display = "flex";
-        fullImg.src = imgSrc;
+    let currentImgIndex = 0;
+    let allImages = [];
+  
+    galleryImages.forEach((img, index) => {
+      allImages.push(img.src);
+      img.addEventListener("click", function () {
+        currentImgIndex = index;
+        openFullImg(allImages[currentImgIndex]);
+      });
+    });
+  
+    function openFullImg(src) {
+      fullImgBox.style.display = "flex";
+      fullImg.src = src;
     }
   
     function closeFullImg() {
-        fullImgBox.style.display = "none";
+      fullImgBox.style.display = "none";
     }
   
-    // Minden galéria képre kattintás esemény hozzáadása
-    document.querySelectorAll(".img-gallery img").forEach(img => {
-        img.addEventListener("click", function() {
-            openFullImg(this.src);
-        });
+    function showPrevImg() {
+      currentImgIndex = (currentImgIndex - 1 + allImages.length) % allImages.length;
+      fullImg.src = allImages[currentImgIndex];
+    }
+  
+    function showNextImg() {
+      currentImgIndex = (currentImgIndex + 1) % allImages.length;
+      fullImg.src = allImages[currentImgIndex];
+    }
+  
+    leftBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showPrevImg();
     });
   
-    // Bezárás gomb
-    document.querySelector(".full-img span").addEventListener("click", closeFullImg);
+    rightBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      showNextImg();
+    });
+  
+    closeBtn.addEventListener("click", closeFullImg);
   
     fullImgBox.addEventListener("click", function(event) {
-      if (event.target !== fullImg) {
-          closeFullImg();
+      const target = event.target;
+      if (
+        target !== fullImg &&
+        !target.classList.contains("nav") &&
+        !target.classList.contains("close")
+      ) {
+        closeFullImg();
       }
     });
-  
-    
   });
