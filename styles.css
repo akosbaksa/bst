@@ -1757,3 +1757,33 @@ button:hover {
 button:focus {
   outline: none;
 }
+
+/* Széchenyi 2020 sarok banner */
+
+.szechenyi-banner {
+  position: fixed;
+  top: 47px;
+  right: 0;
+  z-index: 9999;
+  width: 260px;
+  transition: 0.3s ease;
+}
+
+.szechenyi-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.szechenyi-banner:hover {
+  transform: scale(1.03);
+}
+
+/* Mobil nézet */
+
+@media (max-width: 768px) {
+  .szechenyi-banner {
+    width: 150px;
+    top: 50px;
+  }
+}
